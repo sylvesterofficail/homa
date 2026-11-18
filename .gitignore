@@ -1,4 +1,4 @@
-node_modules/
-.next/
-out/
+source/node_modules/
+source/.next/
+source/out/
 .DS_Store
