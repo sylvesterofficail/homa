@@ -1,14 +1,35 @@
 # homa
 
-Portfolio and living archive of **Victory Homa Obuzor**: HR, corporate communications and brand strategy.
+Portfolio of **Victory Homa Obuzor**: HR, corporate communications and brand strategy.
 
-Plain HTML, CSS and JS with no build step. Open `index.html` in a browser, or serve the folder with any static host (GitHub Pages works as is).
+Built with Next.js (App Router, static export), Tailwind CSS and Framer Motion.
 
-- `index.html`: page markup
-- `style.css`: base design system (olive, sage and gold on warm paper)
-- `enhance.css` / `enhance.js`: portrait system, preloader, motion and responsive refinements
-- `script.js`: modals, career vault, archive, CV reader
-- `vendor/`: Font Awesome 6.4.2 and the site's web fonts, bundled locally so icons and type always load
-- `assets/`: photos and CV PDFs
+## Run it locally
+
+```bash
+npm install
+npm run dev        # http://localhost:3000
+```
+
+## Publish
+
+Every push to `main` builds the site and publishes it to GitHub Pages
+(`.github/workflows/pages.yml`). One-time setup: **Settings → Pages → Source: GitHub Actions**.
+The site is then live at `https://<user>.github.io/homa/`.
+
+To build by hand: `npm run build` writes a static site to `out/`.
+
+## Where things live
+
+| Path | What it is |
+| --- | --- |
+| `app/globals.css`, `tailwind.config.js` | Design tokens: colour, type scale, radius, motion easing |
+| `app/site.css` | Nav, drawer, hero, tabs, archive rows, form fields |
+| `components/` | One file per section, in page order (see `app/page.jsx`) |
+| `components/motion.jsx` | Shared motion: reveals, staggers, masked word rises |
+| `public/legacy/script.js` + `app/legacy.css` | Interactive layer: dossiers, CV reader, career vault, archive, budget calculator |
+| `public/assets/` | Photos and CV PDFs |
+
+Fonts (Bodoni Moda, Plus Jakarta Sans) and Font Awesome icons are bundled with the site, so nothing loads from a third-party CDN.
 
 Developed by Acies Technology Africa.

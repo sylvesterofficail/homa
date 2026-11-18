@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   DESIGN TOKENS — Victory Homa Obuzor
+   Brand kept: olive, sage, gold on paper. Added one accent lifted from the
+   portrait itself: the pale jacquard blue of her collar.
+   ========================================================================== */
+:root {
+  --paper: 241 237 228;      /* #f1ede4  page ground            */
+  --raised: 232 226 213;     /* #e8e2d5  quiet panels           */
+  --ink: 25 30 25;           /* #191e19  text                   */
+  --muted: 88 97 87;         /* #586157  secondary text (AA)    */
+  --olive: 34 44 32;         /* #222c20  brand field            */
+  --moss: 72 94 70;          /* #485e46  brand secondary        */
+  --sage: 117 139 114;       /* #758b72  brand tertiary         */
+  --gold: 154 112 44;        /* #9a702c  brand gold, AA on paper */
+  --cream: 236 230 218;      /* #ece6da  text on olive          */
+  --jacquard: 141 179 212;   /* #8db3d4  accent from the photo  */
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Aliases so the interactive layer (legacy script.js / legacy.css) inherits the new tokens */
+  --bg-app: rgb(var(--paper));
+  --bg-surface: #fbf9f4;
+  --bg-surface-warm: rgb(var(--raised));
+  --bg-surface-elevated: #f7f4ec;
+  --bg-card-subtle: #f7f4ec;
+  --text-primary: rgb(var(--ink));
+  --text-secondary: rgb(var(--muted));
+  --text-muted: #6f786e;
+  --text-olive: rgb(var(--olive));
+  --accent-olive: rgb(var(--olive));
+  --accent-olive-hover: rgb(var(--moss));
+  --accent-olive-light: rgb(var(--moss));
+  --accent-sage: rgb(var(--sage));
+  --accent-sage-soft: #e3e9e0;
+  --accent-gold: rgb(var(--gold));
+  --accent-gold-soft: #f3ead8;
+  --accent-cream: rgb(var(--cream));
+  --border-subtle: rgb(var(--ink) / 0.12);
+  --border-medium: rgb(var(--ink) / 0.22);
+  --border-dark: rgb(var(--ink));
+  --font-serif: var(--font-display);
+  --radius-xs: 4px; --radius-sm: 4px; --radius-md: 4px; --radius-lg: 12px; --radius-xl: 12px; --radius-pill: 9999px;
+  --shadow-sm: 0 1px 2px rgb(25 30 25 / 0.08);
+  --shadow-md: 0 12px 24px -16px rgb(25 30 25 / 0.3);
+  --shadow-lg: 0 24px 48px -24px rgb(25 30 25 / 0.35);
+  --transition-fast: 0.2s var(--ease-out);
+  --transition-normal: 0.3s var(--ease-out);
+  --transition-slow: 0.5s var(--ease-out);
+}
+
+[data-theme="dark"] {
+  --paper: 20 24 20;
+  --raised: 30 37 30;
+  --ink: 236 232 222;
+  --muted: 168 178 165;
+  --olive: 14 18 14;
+  --moss: 112 151 109;
+  --sage: 143 165 140;
+  --gold: 216 175 101;
+  --cream: 236 230 218;
+  --bg-surface: #1b211b;
+  --bg-surface-elevated: #222a22;
+  --bg-card-subtle: #1b211b;
+  --text-muted: #8d998b;
+  --accent-sage-soft: #223022;
+  --accent-gold-soft: #2e2617;
+  --accent-olive: #3c5539;
+  --accent-olive-hover: #4d6d4a;
+}
+
+/* ---------------- Base ---------------- */
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body {
+  background: rgb(var(--paper));
+  color: rgb(var(--ink));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+  transition: background-color 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+::selection { background: rgb(var(--jacquard) / 0.45); color: rgb(var(--ink)); }
+a, button { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+img { max-width: 100%; display: block; }
+:focus-visible { outline: 2px solid rgb(var(--gold)); outline-offset: 3px; border-radius: 2px; }
+
+/* Grain — a little print texture so the paper doesn't read as flat screen-beige */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.grain-light::after { mix-blend-mode: screen; opacity: 0.05; }
+
+@layer components {
+  .page { @apply mx-auto w-full max-w-page px-6 md:px-10; }
+  .label { @apply text-sm font-semibold text-gold; letter-spacing: 0.01em; }
+  .h-section { @apply font-display text-3xl md:text-4xl font-normal tracking-[-0.02em]; }
+  .lede { @apply text-lg text-muted max-w-measure; }
+
+  .link-u { position: relative; }
+  .link-u::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px;
+    background: currentColor; transform: scaleX(0); transform-origin: right;
+    transition: transform 0.35s var(--ease-out);
+  }
+  .link-u:hover::after { transform: scaleX(1); transform-origin: left; }
+
+  /* Buttons: one shape, three weights. States: hover, active, focus, disabled */
+  .b { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-[background-color,color,transform,box-shadow] duration-200 ease-out active:scale-[0.97] disabled:opacity-40 disabled:pointer-events-none; }
+  .b-solid { @apply b bg-olive text-cream hover:bg-moss; }
+  .b-gold  { @apply b bg-gold text-[#fff] hover:bg-ink; }
+  .b-line  { @apply b border border-ink/25 text-ink hover:border-ink hover:bg-ink hover:text-paper; }
+  .b-ghost-light { @apply b border border-cream/35 text-cream hover:bg-cream hover:text-olive; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
