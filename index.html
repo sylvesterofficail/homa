@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Victory Homa Obuzor — Living Portfolio &amp; Archive</title>
+  <meta name="description" content="Personal digital portfolio, executive career record, and time capsule of Victory Homa Obuzor — Strategy, People, Business Development &amp; Brand Systems." />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23222c20'/><circle cx='50' cy='50' r='42' fill='none' stroke='%23b38538' stroke-width='3'/><text x='50' y='66' text-anchor='middle' font-family='Georgia,serif' font-size='48' font-weight='700' fill='%23ffffff'>H</text></svg>" />
+  <meta name="theme-color" content="#222c20" />
+  <link rel="preload" as="image" href="assets/images/homa_cutout_full.webp" />
+
+  <!-- Fonts & icons are bundled locally so they always load (no CDN dependency) -->
+  <link rel="preload" href="vendor/fontawesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="vendor/fonts/playfair-display-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="vendor/fonts/fonts.css" />
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=9" />
+  <link rel="stylesheet" href="enhance.css?v=2" />
+</head>
+<body id="top" class="is-loading">
+
+  <!-- Intro Preloader -->
+  <div class="hx-preloader" id="hxPreloader" aria-hidden="true">
+    <div class="hx-preloader-inner">
+      <div class="hx-preloader-avatar">
+        <svg class="hx-preloader-ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" /></svg>
+        <img src="assets/images/homa_cutout_neck.webp" alt="" />
+      </div>
+      <div class="hx-preloader-name"><span>Victory</span> <em>Homa</em></div>
+      <div class="hx-preloader-sub">Portfolio &amp; Living Archive</div>
+    </div>
+  </div>
+
+  <!-- Back to top with scroll ring -->
+  <a href="#top" class="hx-totop" id="hxToTop" aria-label="Back to top">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><circle class="track" cx="24" cy="24" r="21"/><circle class="bar" id="hxToTopBar" cx="24" cy="24" r="21"/></svg>
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
+  <!-- Top Reading Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
+  <!-- Ambient Interactive Cursor Glow Aura -->
+  <div class="cursor-spotlight" id="cursorSpotlight" aria-hidden="true"></div>
+
+  <!-- Topline Accent -->
+  <div class="topline"></div>
+
+  <!-- Sticky Navbar -->
+  <header class="main-header" id="navbar">
+    <div class="wrap nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="#top" class="brand" aria-label="Victory Homa Obuzor Home">
+        <span class="brand-monogram hx-avatar-mono"><img src="assets/images/homa_neck.webp" alt="" /></span>
+        <div class="brand-text">
+          <span class="brand-title">VICTORY HOMA OBUZOR</span>
+          <span class="brand-sub">A Lifelong Professional Archive</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="navlinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#life">Life</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="vault-toggle-nav-btn" id="navVaultBtn" title="Toggle Private Career Vault" aria-label="Career Vault">
+          <i class="fa-solid fa-lock" id="navVaultIcon"></i> <span id="navVaultText">Career Vault</span>
+        </button>
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="btn btn-primary" id="navCvBtn" style="padding:8px 18px;font-size:0.82rem;">
+          Explore CVs ↗
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open mobile navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand">
+        <span class="brand-monogram hx-avatar-mono"><img src="assets/images/homa_neck.webp" alt="" /></span>
+        <div class="brand-text">
+          <span class="brand-title">VICTORY HOMA</span>
+          <span class="brand-sub">Portfolio &amp; Archive</span>
+        </div>
+      </div>
+      <button class="drawer-close-btn" id="drawerClose" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="mobile-navlinks">
+      <li><a href="#about">01. About &amp; Trajectory</a></li>
+      <li><a href="#projects">02. Selected Work &amp; Ventures</a></li>
+      <li><a href="#experience">03. Permanent Career Record</a></li>
+      <li><a href="#life">04. Life Outside Work</a></li>
+      <li><a href="#contact">05. Contact &amp; Connect</a></li>
+    </ul>
+    <div class="mobile-drawer-footer" style="margin-top:auto;padding-top:20px;display:flex;flex-direction:column;gap:10px;">
+      <button class="btn btn-gold" id="drawerVaultBtn" style="width:100%;justify-content:center;">
+        <i class="fa-solid fa-lock"></i> Career Vault
+      </button>
+      <a href="#cv" class="btn btn-secondary" id="drawerCvBtn" style="width:100%;justify-content:center;">
+        <i class="fa-solid fa-file-lines"></i> Explore CVs ↗
+      </a>
+      <a href="#contact" class="btn btn-primary" style="width:100%;text-align:center;justify-content:center;">
+        Get in Touch ↗
+      </a>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- =======================================================================
+         1. HERO SECTION ("Meet Me" Editorial Billboard)
+         ======================================================================= -->
+    <!-- =======================================================================
+         1. SIGNATURE HERO SECTION (Editorial Alignment & Clean Cutout)
+         ======================================================================= -->
+    <section class="hero-signature" id="home">
+      <!-- Ambient Dynamic Glowing Orbs -->
+      <div class="hero-aurora-bg" aria-hidden="true">
+        <div class="aurora-orb orb-gold"></div>
+        <div class="aurora-orb orb-forest"></div>
+      </div>
+
+      <!-- Centered wrapper aligned with header & sections -->
+      <div class="wrap">
+        <div class="hero-signature-grid">
+          
+          <!-- Left Content Column -->
+          <div class="hero-signature-copy reveal">
+            <div class="hero-role-pill">
+              <span class="role-dot"></span>
+              HUMAN RESOURCE MANAGEMENT · CORPORATE COMMS · STRATEGY
+            </div>
+
+            <h1 class="hero-signature-title">
+              <span class="title-line">Hello, my name</span><br />
+              <span class="title-highlight">is <span class="hx-shimmer">Victory Homa</span></span>
+            </h1>
+
+            <p class="hero-signature-desc">
+              Human Resource Management graduate and Corporate Communications specialist currently completing NYSC at <strong>FCMB Pensions Limited</strong>. Crafting workplace systems, high-converting brand stories, and digital growth strategies.
+            </p>
+
+            <div class="hero-signature-actions">
+              <a href="#projects" class="btn btn-sig-primary magnetic-btn">
+                <span>View Projects</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <button class="btn btn-sig-secondary cv-preview-trigger magnetic-btn" data-cv-mode="hr" id="heroSigCvBtn">
+                <i class="fa-regular fa-file-lines"></i> <span>Explore CV</span>
+              </button>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-sig-outline magnetic-btn" title="Connect on LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i> <span>LinkedIn</span>
+              </a>
+            </div>
+
+            <div class="hero-location-tag">
+              <span class="pulse-dot"></span>
+              <span>Based in Abuja &amp; Rivers State, Nigeria · Open to Strategic Collaborations</span>
+            </div>
+          </div>
+
+          <!-- Right Stage: Studio Cutout Portrait (No Room BG, No Heavy Wave) with Floating 3D Badges & Kinetic Rings -->
+          <div class="hero-signature-stage reveal reveal-delay-1" id="heroStage">
+            <div class="hero-portrait-stage-inner">
+              <!-- Animated Concentric Orbital Rings -->
+              <div class="hero-halo-rings" aria-hidden="true">
+                <div class="halo-ring ring-outer"></div>
+                <div class="halo-ring ring-middle"></div>
+                <div class="halo-ring ring-inner"></div>
+                <div class="halo-glow-backdrop"></div>
+              </div>
+
+              <!-- Clean Cutout of Victory Homa with studio pedestal & shadow -->
+              <div class="hx-arch" aria-hidden="true">
+                <div class="hx-arch-pattern"></div>
+                <span class="hx-arch-word">HOMA</span>
+              </div>
+              <div class="hero-cutout-frame">
+                <img src="assets/images/homa_cutout_full.webp" alt="Victory Homa Obuzor in a blue and gold agbada-style studio look" class="hero-cutout-image hx-hero-figure" id="heroPortraitImg" width="390" height="940" fetchpriority="high" />
+              </div>
+
+              <!-- Floating Micro-Badges with 3D Depth & Hover Physics -->
+              <div class="sig-floating-badge badge-top-right float-badge-1" data-depth="0.12">
+                <div class="badge-icon-box"><i class="fa-solid fa-chess-queen"></i></div>
+                <div>
+                  <strong>Strategy &amp; Comms</strong>
+                  <small>FCMB Pensions NYSC</small>
+                </div>
+              </div>
+
+              <div class="sig-floating-badge badge-mid-left float-badge-2" data-depth="0.22">
+                <div class="badge-icon-box"><i class="fa-solid fa-user-group"></i></div>
+                <div>
+                  <strong>50+ Candidates</strong>
+                  <small>Screened &amp; Coordinated</small>
+                </div>
+              </div>
+
+              <div class="sig-floating-badge badge-bottom-right float-badge-3" data-depth="0.18">
+                <div class="badge-icon-box"><i class="fa-solid fa-seedling"></i></div>
+                <div>
+                  <strong>Green Money Planner™</strong>
+                  <small>Founder &amp; Product Lead</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <a href="#about" class="hx-scroll-cue" aria-label="Scroll to About"><span></span></a>
+    </section>
+
+    <!-- Kinetic marquee strip -->
+    <div class="hx-marquee" aria-hidden="true">
+      <div class="hx-marquee-track">
+        <span><i class="fa-solid fa-diamond"></i> Human Resource Management</span>
+        <span><i class="fa-solid fa-diamond"></i> Corporate Communications</span>
+        <span><i class="fa-solid fa-diamond"></i> Brand Strategy</span>
+        <span><i class="fa-solid fa-diamond"></i> Social Media Direction</span>
+        <span><i class="fa-solid fa-diamond"></i> People Operations</span>
+        <span><i class="fa-solid fa-diamond"></i> Green Money Planner&trade;</span>
+        <span><i class="fa-solid fa-diamond"></i> Human Resource Management</span>
+        <span><i class="fa-solid fa-diamond"></i> Corporate Communications</span>
+        <span><i class="fa-solid fa-diamond"></i> Brand Strategy</span>
+        <span><i class="fa-solid fa-diamond"></i> Social Media Direction</span>
+        <span><i class="fa-solid fa-diamond"></i> People Operations</span>
+        <span><i class="fa-solid fa-diamond"></i> Green Money Planner&trade;</span>
+      </div>
+    </div>
+
+    <!-- =======================================================================
+         2. SECTION 01: ABOUT ME (The Person)
+         ======================================================================= -->
+    <!-- =======================================================================
+         2. SECTION 01: ABOUT ME & STRATEGIC TRAJECTORY
+         ======================================================================= -->
+    <section class="section section-warm" id="about">
+      <div class="wrap">
+        
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">01 / The story &amp; trajectory</div>
+            <h2 class="serif">People, strategy<br />&amp; digital execution.</h2>
+          </div>
+          <p>
+            Bridging organizational psychology, corporate communications, and digital brand architecture. A career built on discretion, curiosity, and high-standard execution.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Column 1: Image & Foundational Narrative -->
+          <div class="about-narrative-col reveal">
+            <div class="about-media-card hx-img-reveal">
+              <img src="assets/images/homa_half.webp" alt="Victory Homa in a studio portrait, waist up" class="about-img hx-about-portrait" loading="lazy" />
+              <div class="hx-about-chip"><i class="fa-solid fa-circle-check"></i> Strategy · People · Story</div>
+              <div class="about-media-caption">
+                <div class="handwritten">"Building systems with patience, research &amp; intention."</div>
+                <p style="font-size:0.84rem;margin-top:6px;opacity:0.9;">Studio portrait · Lifelong documentation in progress</p>
+              </div>
+            </div>
+
+            <!-- Stats Matrix with Animated Counters -->
+            <div class="stats-matrix" style="margin-top:24px;">
+              <div class="stat-box">
+                <div class="num counter" data-target="50" data-suffix="+">0</div>
+                <div class="label">Candidates Coordinated</div>
+              </div>
+              <div class="stat-box">
+                <div class="num">B.Sc.</div>
+                <div class="label">Human Resource Mgt.</div>
+              </div>
+              <div class="stat-box">
+                <div class="num counter" data-target="4" data-suffix="+ Yrs">0</div>
+                <div class="label">Cross-Disciplinary Strategy</div>
+              </div>
+              <div class="stat-box">
+                <div class="num counter" data-target="100" data-suffix="%">0</div>
+                <div class="label">Compliance &amp; PenCom Rigor</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Core Capabilities & Evolutionary Roadmap -->
+          <div class="about-capabilities-col reveal reveal-delay-1">
+            
+            <div class="capability-card">
+              <div class="cap-num">01</div>
+              <div class="cap-body">
+                <h3>People &amp; Organizational Operations</h3>
+                <p>
+                  B.Sc. in Human Resource Management from Elizade University. Practical experience managing candidate screening pipelines (50+ candidates), standard operating procedures, employee handbooks, and HRIS systems at Kodesh Skincare, Castel Resources, and Meridian Hospital.
+                </p>
+              </div>
+            </div>
+
+            <div class="capability-card">
+              <div class="cap-num">02</div>
+              <div class="cap-body">
+                <h3>Corporate Communications &amp; Strategy</h3>
+                <p>
+                  NYSC placement at FCMB Pensions Limited (Strategy &amp; Corporate Communications). Developing deep understanding of PenCom regulations, pension literacy campaigns, website content reviews, and digital academy launch initiatives.
+                </p>
+              </div>
+            </div>
+
+            <div class="capability-card">
+              <div class="cap-num">03</div>
+              <div class="cap-body">
+                <h3>Brand Positioning &amp; Social Content Direction</h3>
+                <p>
+                  Directing visual storytelling and high-converting campaigns across Instagram, TikTok, and Meta. Proven track record executing 7-day brand turnarounds (Dine with Shine Abuja), aesthetic skincare marketing (Kodesh &amp; Xotic Queens), and email customer retention (Kivestores).
+                </p>
+              </div>
+            </div>
+
+            <div class="capability-card">
+              <div class="cap-num">04</div>
+              <div class="cap-body">
+                <h3>Venture Architecture &amp; Long-Term Vision</h3>
+                <p>
+                  Founder of <em>Green Money Planner™</em>, crafting behavioral finance models that remove money shame. Ambition expanding into enterprise consulting, aviation flight operations, and timeless interior architecture.
+                </p>
+              </div>
+            </div>
+
+            <!-- Integrated Evolutionary Roadmap -->
+            <div class="roadmap-container" style="margin-top:24px;">
+              <div class="roadmap-head">
+                <div>
+                  <div class="eyebrow" style="margin-bottom:2px;">Evolutionary Roadmap</div>
+                  <h4 class="serif" style="font-size:1.15rem;">How one chapter prepares the next</h4>
+                </div>
+                <span class="handwritten" style="font-size:1.25rem;">"Always evolving"</span>
+              </div>
+
+              <div class="roadmap-track">
+                <div class="roadmap-node">
+                  <b>HRM &amp; People</b>
+                  <span>Foundational operations</span>
+                </div>
+                <div class="roadmap-arrow">→</div>
+                <div class="roadmap-node">
+                  <b>Digital Media</b>
+                  <span>Visual storytelling</span>
+                </div>
+                <div class="roadmap-arrow">→</div>
+                <div class="roadmap-node">
+                  <b>Corporate Comms</b>
+                  <span>FCMB Pensions NYSC</span>
+                </div>
+                <div class="roadmap-arrow">→</div>
+                <div class="roadmap-node">
+                  <b>Brand Strategy</b>
+                  <span>Ventures &amp; Advisory</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SIGNATURE BAND — full portrait with backdrop + manifesto
+         ======================================================================= -->
+    <section class="hx-signature" id="signature">
+      <div class="wrap hx-signature-grid">
+        <figure class="hx-signature-media">
+          <div class="hx-sig-halo" aria-hidden="true"><span></span><span></span></div>
+          <img src="assets/images/homa_cutout_full.webp" alt="Full-length portrait of Victory Homa in a blue and gold jacquard look" loading="lazy" data-parallax="0.05" />
+          <div class="hx-sig-floor" aria-hidden="true"></div>
+          <figcaption class="handwritten">Rooted in culture, built for the boardroom.</figcaption>
+        </figure>
+        <div class="hx-signature-copy">
+          <div class="eyebrow reveal">02 / The principle</div>
+          <blockquote class="hx-quote reveal reveal-delay-1">
+            <i class="fa-solid fa-quote-left"></i>
+            Great organisations are built by people who feel <em>seen</em>, and brands that tell the truth <em>beautifully</em>.
+          </blockquote>
+          <div class="hx-values">
+            <div class="hx-value reveal reveal-delay-1">
+              <span class="hx-value-icon"><i class="fa-solid fa-people-group"></i></span>
+              <div><strong>People first</strong><small>Systems that make work humane and measurable.</small></div>
+            </div>
+            <div class="hx-value reveal reveal-delay-2">
+              <span class="hx-value-icon"><i class="fa-solid fa-feather-pointed"></i></span>
+              <div><strong>Story with intent</strong><small>Every message carries a reason and a result.</small></div>
+            </div>
+            <div class="hx-value reveal reveal-delay-3">
+              <span class="hx-value-icon"><i class="fa-solid fa-compass-drafting"></i></span>
+              <div><strong>Quiet excellence</strong><small>Discretion, detail, and follow-through.</small></div>
+            </div>
+          </div>
+          <div class="hx-signoff reveal reveal-delay-2">
+            <img src="assets/images/homa_cutout_neck.webp" alt="" class="hx-signoff-avatar" loading="lazy" />
+            <div>
+              <span class="hx-signature-script">Victory Homa</span>
+              <small>Obuzor · HR, Comms &amp; Strategy</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. SECTION 03: SELECTED WORK & VENTURES (Projects)
+         ======================================================================= -->
+    <section class="section section-warm" id="projects">
+      <div class="wrap">
+        
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">03 / Ideas becoming real</div>
+            <h2 class="serif">Selected work<br />&amp; case studies.</h2>
+          </div>
+          <p>
+            Every project follows a rigorous, impact-driven methodology: <strong>Problem &rarr; What I Built &rarr; My Role &rarr; Progress &rarr; Results &rarr; What I Learned</strong>. Click any card to launch the complete case study and interactive tools.
+          </p>
+        </div>
+
+        <!-- Hero Featured Venture: Green Money Planner -->
+        <div class="featured-project-card reveal">
+          <div class="project-img-frame">
+            <img src="assets/images/proj_green_money.jpg" alt="Green Money Planner Mockup" />
+          </div>
+          <div class="project-details">
+            <div class="eyebrow">Featured Venture · Founder &amp; Lead Architect</div>
+            <h3 class="serif">Green Money Planner™</h3>
+            <p>
+              A Nigeria-first financial wellness platform designed to help young professionals and students budget with intention, counter inflation anxiety, and develop sustainable savings discipline.
+            </p>
+            <ul class="project-meta-list">
+              <li><strong>Problem &amp; Solution:</strong> 76% of young graduates struggle with inflation-induced budgeting fatigue; Green Money Planner delivers culturally resonant micro-budgeting and automated allocation models.</li>
+              <li><strong>My Remit:</strong> Founder, product vision, wireframe UX design, user testing, and behavioral financial modeling.</li>
+            </ul>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
+              <button class="btn btn-primary" id="openGmpCaseStudyBtn">
+                <i class="fa-solid fa-calculator"></i> Launch Case Study &amp; Live Calculator ↗
+              </button>
+              <button class="btn btn-outline" id="viewGmpDetailsBtn">
+                <i class="fa-solid fa-book-open"></i> Problem &rarr; Results Dossier
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-Column / Responsive Projects Grid -->
+        <div class="projects-grid" style="grid-template-columns:repeat(auto-fit, minmax(270px, 1fr));">
+          
+          <!-- ManagedbyHoma -->
+          <article class="project-subcard reveal">
+            <div class="subcard-img-wrap">
+              <img src="assets/images/proj_managed_homa.jpg" alt="ManagedbyHoma Brand Workspace" />
+            </div>
+            <div class="subcard-content">
+              <div>
+                <span class="pill pill-gold" style="margin-bottom:10px;">Brand &amp; Creative Studio</span>
+                <h4>ManagedbyHoma</h4>
+                <p>
+                  Full-stack digital brand strategy and creative consultancy for boutique brands — editorial calendars, high-converting social campaigns, and client retention funnels.
+                </p>
+              </div>
+              <button class="btn btn-outline" data-dossier="managedbyhoma" style="width:100%;margin-top:14px;">Open Studio Dossier ↗</button>
+            </div>
+          </article>
+
+          <!-- Dine with Shine Abuja Turnaround -->
+          <article class="project-subcard reveal reveal-delay-1">
+            <div class="subcard-img-wrap">
+              <img src="assets/images/life_food.jpg" alt="Dine with Shine Campaign" />
+            </div>
+            <div class="subcard-content">
+              <div>
+                <span class="pill pill-gold" style="margin-bottom:10px;">7-Day Brand Turnaround</span>
+                <h4>Dine with Shine Campaign</h4>
+                <p>
+                  High-energy social campaign in Abuja combining viral culinary BTS reels, foodie engagement series, and SEO caption architecture that drove record table bookings.
+                </p>
+              </div>
+              <button class="btn btn-outline" data-dossier="dinewithshine" style="width:100%;margin-top:14px;">View Campaign Case Study ↗</button>
+            </div>
+          </article>
+
+          <!-- NDDC Academic Research Study -->
+          <article class="project-subcard reveal reveal-delay-2">
+            <div class="subcard-img-wrap">
+              <img src="assets/images/proj_nysc_research.jpg" alt="NDDC Research Study" />
+            </div>
+            <div class="subcard-content">
+              <div>
+                <span class="pill" style="margin-bottom:10px;">Empirical Academic Research</span>
+                <h4>NDDC Employee Performance</h4>
+                <p>
+                  B.Sc. HRM research examining training interval impact on employee productivity within the Niger Delta Development Commission using quantitative surveys.
+                </p>
+              </div>
+              <button class="btn btn-outline" id="openNddcStudyBtn" style="width:100%;margin-top:14px;">Explore Research Paper ↗</button>
+            </div>
+          </article>
+
+          <!-- Campus Cart -->
+          <article class="project-subcard reveal reveal-delay-3">
+            <div class="subcard-img-wrap">
+              <img src="assets/images/proj_campus_cart.jpg" alt="Campus Cart Logistics Concept" />
+            </div>
+            <div class="subcard-content">
+              <div>
+                <span class="pill" style="margin-bottom:10px;">Student Micro-Commerce</span>
+                <h4>Campus Cart</h4>
+                <p>
+                  Peer-to-peer campus delivery network and student convenience marketplace addressing night-time supply friction across university residential hostels.
+                </p>
+              </div>
+              <button class="btn btn-outline" id="openCampusCartBtn" style="width:100%;margin-top:14px;">View Operations Study ↗</button>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. SECTION 04: THE JOURNEY, DOCUMENTED (Career Experience & Dossiers)
+         ======================================================================= -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">04 / The journey, documented</div>
+            <h2 class="serif">Permanent career record.<br />Every chapter verified.</h2>
+          </div>
+          <p>
+            A comprehensive, lifetime record spanning Strategy, Human Resource Management, Corporate Communications, and Digital Brand Growth. Click any organization card below to inspect full responsibilities, achievements, and case notes.
+          </p>
+        </div>
+
+        <!-- Experience Discipline Filter Toolbar -->
+        <div class="exp-filter-toolbar reveal">
+          <button class="chip-btn active" data-exp-filter="all">All Experiences (7)</button>
+          <button class="chip-btn" data-exp-filter="strategy">Strategy &amp; Corporate Comms</button>
+          <button class="chip-btn" data-exp-filter="hr">HR &amp; People Operations</button>
+          <button class="chip-btn" data-exp-filter="marketing">Social Media &amp; Digital Growth</button>
+        </div>
+
+        <div class="dossier-intro-box hx-intro-avatar-box reveal">
+          <img src="assets/images/homa_neck.webp" alt="" class="hx-intro-avatar" loading="lazy" />
+          <div>
+            <strong>Interactive Career Archive:</strong> Click any organization card below to open its verified dossier, view specific contributions, download structured notes, or upload media attachments in your local session.
+          </div>
+        </div>
+
+        <div class="dossier-grid" id="experienceGrid">
+          
+          <!-- 1. FCMB Pensions Limited -->
+          <article class="dossier-card exp-card reveal" data-category="strategy hr" data-dossier="fcmb">
+            <div>
+              <div class="dossier-top">
+                <span class="pill pill-gold">NYSC Placement · 2025–Present</span>
+                <div class="dossier-icon-badge"><i class="fa-solid fa-landmark"></i></div>
+              </div>
+              <h3>FCMB Pensions Limited</h3>
+              <p><strong>NYSC Corps Member – Strategy &amp; Corporate Communications</strong> · Abuja, Nigeria. Corporate communication initiatives, PenCom regulatory literacy, content review for website, and Itual Academy project support.</p>
+            </div>
+            <div class="dossier-footer">
+              <span>View full dossier</span>
+              <span>↗</span>
+            </div>
+          </article>
+
+          <!-- 2. Dine with Shine, Abuja -->
+          <article class="dossier-card exp-card reveal reveal-delay-1" data-category="marketing strategy" data-dossier="dinewithshine">
+            <div>
+              <div class="dossier-top">
+                <span class="pill pill-gold">Contract · Feb 2026</span>
+                <div class="dossier-icon-badge"><i class="fa-solid fa-utensils"></i></div>
+              </div>
+              <h3>Dine with Shine, Abuja</h3>
+              <p><strong>Social Media Manager &amp; Content Strategist</strong> · Executed high-converting 7-day brand review series, viral BTS reels, SEO captions, and culinary positioning that maximized foot-traffic conversion.</p>
+            </div>
+            <div class="dossier-footer">
+              <span>View full dossier</span>
+              <span>↗</span>
+            </div>
+          </article>
+
+          <!-- 3. Kodesh Skincare & Spa -->
+          <article class="dossier-card exp-card reveal reveal-delay-2" data-category="hr marketing" data-dossier="kodesh">
+            <div>
+              <div class="dossier-top">
+                <span class="pill">Hybrid · Oct 2024 – May 2025</span>
+                <div class="dossier-icon-badge"><i class="fa-solid fa-spa"></i></div>
+              </div>
+              <h3>Kodesh Skincare &amp; Spa</h3>
+              <p><strong>HR Manager &amp; Social Media Manager</strong> · Port Harcourt. Recruited and screened 50+ candidates, created employee handbooks/SOPs, managed personnel files, and led digital client conversion campaigns.</p>
+            </div>
+            <div class="dossier-footer">
+              <span>View full dossier</span>
+              <span>↗</span>
+            </div>
+          </article>
+
+          <!-- 4. Kive Stores Limited -->
+          <article class="dossier-card exp-card reveal" data-category="marketing strategy" data-dossier="kive">
+            <div>
+              <div class="dossier-top">
+                <span class="pill">Commercial · 2025</span>
+                <div class="dossier-icon-badge"><i class="fa-solid fa-store"></i></div>
+              </div>
+              <h3>Kive Stores Limited</h3>
+              <p><strong>Business &amp; Administrative Support / Email Marketing</strong> · Handled customer correspondence, graphic design support, commercial operations, and customer retention email campaigns.</p>
+            </div>
+            <div class="dossier-footer">
+              <span>View full dossier</span>
+              <span>↗</span>
+            </div>
+          </article>
+
+          <!-- 5. Castel Resources -->
+          <article class="dossier-card exp-card reveal reveal-delay-1" data-category="hr" data-dossier="castel">
+            <div>
+              <div class="dossier-top">
+                <span class="pill">Industrial Training · Aug–Oct 2024</span>
+                <div class="dossier-icon-badge"><i class="fa-solid fa-briefcase"></i></div>
+              </div>
+              <h3>Castel Resources</h3>
+              <p><strong>Industrial Training Student – HR Intern</strong> · Port Harcourt. Talent acquisition, payroll records, training session coordination, systematic HR archiving, and employee relations documentation.</p>
+            </div>
+            <div class="dossier-footer">
+              <span>View full dossier</span>
+              <span>↗</span>
+            </div>
+          </article>
+
+          <!-- 6. Meridian Hospital -->
+          <article class="dossier-card exp-card reveal reveal-delay-2" data-category="hr" data-dossier="meridian">
+            <div>
+              <div class="dossier-top">
+                <span class="pill">Healthcare · Aug–Oct 2023</span>
+                <div class="dossier-icon-badge"><i class="fa-solid fa-hospital"></i></div>
+              </div>
+              <h3>Meridian Hospital</h3>
+              <p><strong>HR &amp; Administrative Intern</strong> · Port Harcourt. Candidate screening, HRIS and physical records management, confidential onboarding documentation, and hospital operational support.</p>
+            </div>
+            <div class="dossier-footer">
+              <span>View full dossier</span>
+              <span>↗</span>
+            </div>
+          </article>
+
+          <!-- 7. Xotic Queens Beauty Skincare & Spa -->
+          <article class="dossier-card exp-card reveal" data-category="marketing" data-dossier="xoticqueens">
+            <div>
+              <div class="dossier-top">
+                <span class="pill">Digital Growth · Feb–Dec 2025</span>
+                <div class="dossier-icon-badge"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              </div>
+              <h3>Xotic Queens Beauty Skincare</h3>
+              <p><strong>Social Media Manager &amp; Digital Content Assistant</strong> · Designed engaging reels and promo posts for product visibility, managed Instagram community growth, and maintained brand aesthetics.</p>
+            </div>
+            <div class="dossier-footer">
+              <span>View full dossier</span>
+              <span>↗</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. SECTION 05: EDUCATION & RESEARCH
+         ======================================================================= -->
+    <section class="section section-warm" id="education">
+      <div class="wrap">
+        
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">05 / Learning never ends</div>
+            <h2 class="serif">Education, evidence<br />&amp; what's next.</h2>
+          </div>
+          <p>
+            A learning record that grows beyond a degree: academic research, empirical findings, professional coursework, and future study roadmaps.
+          </p>
+        </div>
+
+        <div class="education-grid">
+          
+          <!-- Elizade Card -->
+          <div class="education-card reveal">
+            <div>
+              <div class="eyebrow">Academic Foundation</div>
+              <h3 class="serif">Elizade University</h3>
+              <p>
+                Bachelor of Science (BSc) in Human Resource Management (HRM). Rigorous training in organizational design, talent systems, labor relations, and strategic personnel development.
+              </p>
+              <div class="research-callout">
+                <strong>Key Coursework:</strong> Industrial Psychology, Performance Appraisal, Compensation Strategy, Strategic Management, Labor Economics.
+              </div>
+            </div>
+            <button class="btn btn-outline" data-open-learning="degree">View Education Record ↗</button>
+          </div>
+
+          <!-- Research Card -->
+          <div class="education-card reveal reveal-delay-1">
+            <div>
+              <div class="eyebrow">Final-Year Research Thesis</div>
+              <h3 class="serif">NDDC Training &amp; Employee Performance</h3>
+              <p>
+                Empirical investigation analyzing training and development in relation to employee performance at the Niger Delta Development Commission (NDDC).
+              </p>
+              <div class="research-callout">
+                <strong>Theoretical Framework:</strong> Albert Bandura's Social Learning Theory — examining modeling, behavioral retention, and institutional motivation.
+              </div>
+            </div>
+            <button class="btn btn-outline" data-open-learning="nddc">Read Research Overview ↗</button>
+          </div>
+
+        </div>
+
+        <!-- Master's Planning Card -->
+        <div class="education-card reveal reveal-delay-2" style="margin-top:28px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+            <div>
+              <div class="eyebrow">Future Postgraduate Horizons</div>
+              <h3 class="serif" style="margin:6px 0 8px;">Master's Degree &amp; Strategic Executive Specialization</h3>
+              <p style="margin-bottom:0;">Tracking target institutions, curriculum requirements, application milestones, and business school research.</p>
+            </div>
+            <button class="btn btn-primary" data-open-learning="masters">Plan Future Study ↗</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. SECTION 06: LIFE & INTERESTS (The Person Outside the Job Title)
+         ======================================================================= -->
+    <section class="section" id="life">
+      <div class="wrap">
+        
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">06 / The person outside the job title</div>
+            <h2 class="serif">Things I love.<br />Things I'm learning.</h2>
+          </div>
+          <p>
+            A thoughtful personal corner that makes the portfolio feel human, authentic, and multi-dimensional. Click any passion below to view curations and reflections.
+          </p>
+        </div>
+
+        <div class="life-mosaic">
+          
+          <!-- 1. Reading -->
+          <article class="life-card reveal" data-open-interest="reading">
+            <div class="life-card-media">
+              <img src="assets/images/life_reading.jpg" alt="Books and reading on wooden table" />
+              <span class="life-card-badge"><i class="fa-solid fa-book-open"></i> Inquiry</span>
+            </div>
+            <div class="life-card-body">
+              <div>
+                <h3>Books &amp; Philosophy</h3>
+                <p>Books on strategic psychology, financial behavior, mindset, and biographies of visionary builders.</p>
+              </div>
+              <span class="life-card-action">View Reading List ↗</span>
+            </div>
+          </article>
+
+          <!-- 2. Interior Design -->
+          <article class="life-card reveal reveal-delay-1" data-open-interest="interior">
+            <div class="life-card-media">
+              <img src="assets/images/life_interior.jpg" alt="Aesthetic warm interior with natural lighting" />
+              <span class="life-card-badge"><i class="fa-solid fa-couch"></i> Architecture</span>
+            </div>
+            <div class="life-card-body">
+              <div>
+                <h3>Interior Design &amp; Spaces</h3>
+                <p>Fascinated by spatial harmony, natural light, organic materials, and how physical environments elevate peace.</p>
+              </div>
+              <span class="life-card-action">Explore Design Notes ↗</span>
+            </div>
+          </article>
+
+          <!-- 3. Aviation & Travel -->
+          <article class="life-card reveal reveal-delay-2" data-open-interest="travel">
+            <div class="life-card-media">
+              <img src="assets/images/life_travel.jpg" alt="Airplane wing overlooking clouds at sunset" />
+              <span class="life-card-badge"><i class="fa-solid fa-plane-departure"></i> Flight</span>
+            </div>
+            <div class="life-card-body">
+              <div>
+                <h3>Aviation &amp; Travel</h3>
+                <p>Long-term dream exploring flight operations, aviation logistics, and experiencing global airports.</p>
+              </div>
+              <span class="life-card-action">Aviation Ambitions ↗</span>
+            </div>
+          </article>
+
+          <!-- 4. Fashion -->
+          <article class="life-card reveal" data-open-interest="fashion">
+            <div class="life-card-media hx-life-cutout">
+              <img src="assets/images/homa_cutout_half.webp" alt="Victory Homa styled in a blue and gold jacquard look" loading="lazy" />
+              <span class="life-card-badge"><i class="fa-solid fa-gem"></i> Sartorial</span>
+            </div>
+            <div class="life-card-body">
+              <div>
+                <h3>Style &amp; Presentation</h3>
+                <p>Intentional aesthetics, timeless tailoring, muted tones, and carrying oneself with quiet confidence.</p>
+              </div>
+              <span class="life-card-action">Style Philosophy ↗</span>
+            </div>
+          </article>
+
+          <!-- 5. Culinary -->
+          <article class="life-card reveal reveal-delay-1" data-open-interest="food">
+            <div class="life-card-media">
+              <img src="assets/images/life_food.jpg" alt="Artisanal dining table with fresh food and coffee" />
+              <span class="life-card-badge"><i class="fa-solid fa-utensils"></i> Dining</span>
+            </div>
+            <div class="life-card-body">
+              <div>
+                <h3>Culinary Experiences</h3>
+                <p>Good food, intentional hospitality, artisanal coffee, and meaningful conversations around the table.</p>
+              </div>
+              <span class="life-card-action">Hospitality Notes ↗</span>
+            </div>
+          </article>
+
+          <!-- 6. Sports -->
+          <article class="life-card reveal reveal-delay-2" data-open-interest="sports">
+            <div class="life-card-media">
+              <img src="assets/images/life_sports.jpg" alt="Tennis court and active wellness equipment" />
+              <span class="life-card-badge"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Vitality</span>
+            </div>
+            <div class="life-card-body">
+              <div>
+                <h3>Sports &amp; Fitness</h3>
+                <p>Tennis, physical conditioning, and athletic discipline that sharpens executive mental stamina.</p>
+              </div>
+              <span class="life-card-action">Fitness Discipline ↗</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. SECTION 07: RIGHT NOW (Currently Snapshot)
+         ======================================================================= -->
+    <section class="section section-warm" id="currently">
+      <div class="wrap">
+        
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">07 / Right now</div>
+            <h2 class="serif">The current chapter.<br />A living snapshot.</h2>
+          </div>
+          <p>
+            Updated regularly so colleagues, collaborators, and mentors know what matters most in my world today.
+          </p>
+        </div>
+
+        <div class="currently-grid">
+          
+          <div class="currently-card reveal">
+            <div>
+              <span class="currently-badge-live"><span class="live-pulse"></span> Building</span>
+              <h3>Green Money Planner™</h3>
+              <p>Structuring the financial wellness framework, wireframe user flows, and brand proposition.</p>
+            </div>
+          </div>
+
+          <div class="currently-card reveal reveal-delay-1">
+            <div>
+              <span class="currently-badge-live"><span class="live-pulse"></span> Working On</span>
+              <h3>FCMB Corporate Comms</h3>
+              <p>Supporting corporate communications, website content, and pension educational initiatives.</p>
+            </div>
+          </div>
+
+          <div class="currently-card reveal reveal-delay-2">
+            <div>
+              <span class="currently-badge-live"><span class="live-pulse"></span> Learning</span>
+              <h3>Email &amp; Retention Systems</h3>
+              <p>Studying lifecycle nurture automations, copy architecture, and conversion mechanics.</p>
+            </div>
+          </div>
+
+          <div class="currently-card reveal reveal-delay-3">
+            <div>
+              <span class="currently-badge-live"><span class="live-pulse"></span> Aiming For</span>
+              <h3>Strategic Growth</h3>
+              <p>Refining business advisory services, launching the MVP, and pursuing professional growth.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. SECTION 08: THE TIME CAPSULE (Interactive Archive)
+         ======================================================================= -->
+    <section class="section" id="archive">
+      <div class="wrap">
+        
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">08 / The time capsule</div>
+            <h2 class="serif">Nothing lost.<br />Every chapter counts.</h2>
+          </div>
+          <p>
+            Search and browse the permanent archive of career milestones, ventures, and learning moments. Stored locally with search, category filtering, and backup export.
+          </p>
+        </div>
+
+        <!-- Archive Toolbar -->
+        <!-- Career Vault Banner -->
+        <div class="vault-banner reveal" id="vaultBanner">
+          <div class="vault-banner-content">
+            <h4><i class="fa-solid fa-shield-halved"></i> <span id="vaultBannerTitle">Two-Layer Career Archive: Public vs Private</span></h4>
+            <p id="vaultBannerDesc">
+              You are currently viewing the <strong>Public Portfolio</strong> layer, curated for employers, partners, and collaborators. Unlock the <strong>Private Career Vault</strong> to view confidential case studies, academic transcripts, performance reviews, and internal documents.
+            </p>
+          </div>
+          <div>
+            <button class="btn btn-gold" id="vaultUnlockBtn" style="white-space:nowrap;">
+              <i class="fa-solid fa-lock-open"></i> <span id="vaultUnlockBtnText">Unlock Career Vault</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Archive Toolbar -->
+        <div class="archive-toolbar reveal">
+          
+          <div class="archive-search-wrap">
+            <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted);font-size:0.85rem;"></i>
+            <input type="search" id="archiveSearch" placeholder="Search archive (e.g., 2026, FCMB, Green Money)..." aria-label="Search Archive" />
+          </div>
+
+          <div class="archive-filter-chips">
+            <button class="chip-btn active" data-filter="all">All Entries</button>
+            <button class="chip-btn" data-filter="Career">Career</button>
+            <button class="chip-btn" data-filter="Project">Project</button>
+            <button class="chip-btn" data-filter="Education">Education</button>
+            <button class="chip-btn" data-filter="Personal">Personal</button>
+          </div>
+
+          <button class="btn btn-primary" id="addArchiveBtn" style="padding:8px 18px;font-size:0.82rem;">
+            <i class="fa-solid fa-plus"></i> Add to Archive
+          </button>
+
+        </div>
+
+        <!-- Dynamic Archive List -->
+        <div class="archive-list reveal reveal-delay-1" id="archiveList"></div>
+
+        <div class="archive-empty-state" id="archiveEmpty">
+          <i class="fa-solid fa-folder-open" style="font-size:2rem;margin-bottom:12px;display:block;"></i>
+          No matching records found. Try another search keyword or click <strong>Add to Archive</strong> above.
+        </div>
+
+        <!-- Archive Actions Bar -->
+        <div class="archive-actions-bar reveal">
+          <div style="font-size:0.8rem;color:var(--text-muted);">
+            <i class="fa-solid fa-lock" style="margin-right:6px;"></i>
+            Entries are saved locally to this browser session.
+          </div>
+          <div style="display:flex;gap:10px;">
+            <button class="btn btn-outline" id="manageArchiveBtn" style="padding:6px 14px;font-size:0.78rem;">Manage Records</button>
+            <button class="btn btn-outline" id="exportArchiveBtn" style="padding:6px 14px;font-size:0.78rem;"><i class="fa-solid fa-download"></i> Export Archive Backup</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         10. SECTION 09: MY CV (Snapshot in Time)
+         ======================================================================= -->
+    <section class="section section-warm" id="cv">
+      <div class="wrap">
+        
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow" style="color:var(--accent-gold);">09 / Official Professional Record</div>
+            <h2 class="serif">Digital CVs &amp; Download Center.</h2>
+          </div>
+          <p>
+            Two tailored, verified professional profiles reflecting distinct domains of excellence: <strong>Human Resource Management &amp; Corporate Communications</strong> and <strong>Social Media Management, Content Creation &amp; Email Marketing</strong>. Download the official verified PDFs or explore the interactive live reader.
+          </p>
+        </div>
+
+        <div class="cv-dual-grid">
+          
+          <!-- Profile 1: HR & Corporate Communications -->
+          <article class="cv-profile-card reveal">
+            <div class="cv-card-top">
+              <div class="cv-badge-row">
+                <span class="pill pill-gold">Profile 01 · Corporate &amp; People</span>
+                <div class="cv-icon-circle"><i class="fa-solid fa-users-gear"></i></div>
+              </div>
+              <h3>Human Resource Management, Administration &amp; Communications</h3>
+              <p>
+                HRM graduate (B.Sc. Elizade University) with active NYSC experience at FCMB Pensions Limited (Strategy &amp; Corporate Communications), Kodesh Skincare &amp; Spa (HR Manager), Castel Resources, and Meridian Hospital. Specializing in recruitment screening (50+ candidates), PenCom compliance awareness, and corporate communications.
+              </p>
+              <div class="cv-competency-tags">
+                <span>HR Administration</span>
+                <span>Recruitment &amp; Screening</span>
+                <span>Corporate Communications</span>
+                <span>PenCom &amp; Pension Operations</span>
+                <span>HRIS &amp; Employee Records</span>
+                <span>Policy &amp; SOP Development</span>
+              </div>
+            </div>
+            <div class="cv-card-actions">
+              <a href="assets/docs/Obuzor_Homa_Victory_HR_Corporate_Communications_Resume.pdf" download="Obuzor_Homa_Victory_HR_Corporate_Communications_Resume.pdf" class="btn btn-gold" id="downloadHrPdfBtn">
+                <i class="fa-solid fa-file-arrow-down"></i> Download PDF (Official)
+              </a>
+              <button class="btn btn-outline cv-preview-trigger" data-cv-mode="hr" id="previewHrCvBtn">
+                <i class="fa-regular fa-eye"></i> Interactive Reader ↗
+              </button>
+            </div>
+          </article>
+
+          <!-- Profile 2: Social Media & Digital Marketing -->
+          <article class="cv-profile-card reveal reveal-delay-1">
+            <div class="cv-card-top">
+              <div class="cv-badge-row">
+                <span class="pill">Profile 02 · Digital &amp; Growth</span>
+                <div class="cv-icon-circle"><i class="fa-solid fa-bullhorn"></i></div>
+              </div>
+              <h3>Social Media Management, Content Creation &amp; Email Marketing</h3>
+              <p>
+                Creative and results-driven strategist experienced in high-converting content, brand storytelling, and audience retention across Instagram, TikTok, and Meta platforms. Executed viral brand campaigns (Dine with Shine Abuja), skincare brand growth (Kodesh &amp; Xotic Queens), and email marketing funnels (Kivestores).
+              </p>
+              <div class="cv-competency-tags">
+                <span>Social Media Strategy</span>
+                <span>Reels &amp; Visual Storytelling</span>
+                <span>Email Marketing &amp; Campaigns</span>
+                <span>Meta Business Suite &amp; Insights</span>
+                <span>CapCut &amp; Canva</span>
+                <span>SEO Captions &amp; Branding</span>
+              </div>
+            </div>
+            <div class="cv-card-actions">
+              <a href="assets/docs/Obuzor_Homa_Victory_Social_Media_Digital_Marketing_Resume.pdf" download="Obuzor_Homa_Victory_Social_Media_Digital_Marketing_Resume.pdf" class="btn btn-gold" id="downloadMarketingPdfBtn">
+                <i class="fa-solid fa-file-arrow-down"></i> Download PDF (Official)
+              </a>
+              <button class="btn btn-outline cv-preview-trigger" data-cv-mode="marketing" id="previewMarketingCvBtn">
+                <i class="fa-regular fa-eye"></i> Interactive Reader ↗
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Direct CV Link Callout -->
+        <div class="dossier-intro-box hx-intro-avatar-box reveal" style="margin-top:32px;background:var(--bg-surface);">
+          <img src="assets/images/homa_cutout_neck.webp" alt="" class="hx-intro-avatar hx-intro-avatar-cut" loading="lazy" />
+          <div>
+            <strong>Authentic Documents:</strong> Both PDF files originate directly from Obuzor Homa Victory's official records. You can download either version immediately, or print the standardized format directly from the interactive live reader.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         11. SECTION 10: OPEN TO POSSIBILITIES (Contact)
+         ======================================================================= -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">10 / Open to possibilities</div>
+            <h2 class="serif">Good work<br />starts with a conversation.</h2>
+          </div>
+          <p>
+            For strategic collaborations, brand consulting, speaking opportunities, or a thoughtful hello, send a message below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info -->
+          <div class="contact-info-panel reveal">
+            <div class="hx-contact-card">
+              <div class="hx-contact-photo">
+                <img src="assets/images/homa_cutout_half.webp" alt="Victory Homa" loading="lazy" />
+              </div>
+              <div class="hx-contact-copy">
+                <span class="hx-status"><span class="pulse-dot"></span> Available for opportunities</span>
+                <strong class="serif">Let&rsquo;s build something meaningful.</strong>
+                <span class="handwritten">— Homa</span>
+              </div>
+            </div>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--text-secondary);">
+              Whether you are building a new brand, refining an existing business model, or exploring meaningful collaborations, my inbox is open.
+            </p>
+
+            <ul class="contact-items-list">
+              
+              <li class="contact-item-row">
+                <div class="c-icon"><i class="fa-regular fa-envelope"></i></div>
+                <div>
+                  <div style="font-size:0.75rem;text-transform:uppercase;color:var(--text-muted);font-weight:700;">Direct Email</div>
+                  <strong style="color:var(--text-primary);" id="emailText">obuzorhomavictory@gmail.com</strong>
+                  <button id="copyEmailBtn" style="margin-left:8px;font-size:0.75rem;color:var(--accent-sage);text-decoration:underline;">Copy</button>
+                </div>
+              </li>
+
+              <li class="contact-item-row">
+                <div class="c-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div>
+                  <div style="font-size:0.75rem;text-transform:uppercase;color:var(--text-muted);font-weight:700;">LinkedIn Profile</div>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="color:var(--text-primary);font-weight:600;">
+                    Victory Homa Obuzor ↗
+                  </a>
+                </div>
+              </li>
+
+              <li class="contact-item-row">
+                <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <div style="font-size:0.75rem;text-transform:uppercase;color:var(--text-muted);font-weight:700;">Location Base</div>
+                  <strong style="color:var(--text-primary);">Abuja &amp; Rivers State, Nigeria</strong>
+                </div>
+              </li>
+
+            </ul>
+
+            <div class="about-media-card" style="margin-top:16px;">
+              <img src="assets/images/victory_nysc.jpg" alt="Victory in NYSC uniform" style="height:260px;object-fit:cover;width:100%;" />
+              <div class="about-media-caption">
+                <span class="handwritten" style="font-size:1.3rem;">"Committed to growth, service &amp; impact."</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card reveal reveal-delay-1">
+            <form id="contactForm">
+              
+              <div class="form-group">
+                <label for="senderName">Your Name</label>
+                <input id="senderName" class="form-input" placeholder="e.g. Adeola Williams" required />
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail">Your Email</label>
+                <input id="senderEmail" class="form-input" type="email" placeholder="adeola@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="messageType">What is this about?</label>
+                <select id="messageType" class="form-select">
+                  <option value="Brand & Strategy Consultation">Brand &amp; Strategy Consultation</option>
+                  <option value="Professional Role / Placement">Professional Role / Placement</option>
+                  <option value="Green Money Planner Collaboration">Green Money Planner™ Collaboration</option>
+                  <option value="Speaking or Interview Inquiry">Speaking or Interview Inquiry</option>
+                  <option value="General Hello">General Hello</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage">Message</label>
+                <textarea id="senderMessage" class="form-textarea" placeholder="Tell me a little about your project, timeline, or idea..." required></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit" style="width:100%;">
+                Prepare Email Draft ↗
+              </button>
+
+              <p style="font-size:0.75rem;color:var(--text-muted);margin-top:12px;text-align:center;">
+                Opens your preferred mail application with a formatted draft ready to send.
+              </p>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =======================================================================
+       FOOTER
+       ======================================================================= -->
+  <footer class="main-footer">
+    <div class="wrap">
+      
+      <div class="footer-top">
+        <div class="brand">
+          <span class="brand-monogram hx-avatar-mono hx-avatar-lg"><img src="assets/images/homa_cutout_neck.webp" alt="" /></span>
+          <div class="brand-text">
+            <span class="brand-title">VICTORY HOMA OBUZOR</span>
+            <span class="brand-sub">Build · Learn · Create · Grow</span>
+          </div>
+        </div>
+
+        <div class="social-links-row">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link" title="X (Twitter)" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="mailto:obuzorhomavictory@gmail.com" class="social-link" title="Email" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="yearNow">2026</span> Victory Homa Obuzor. All rights reserved. Living Professional Archive.
+        </div>
+        <div>
+          <a href="#top" style="display:inline-flex;align-items:center;gap:6px;font-weight:600;">
+            Back to Top <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Developer Credit: Acies Technology Africa -->
+      <div class="dev-credit-bar">
+        <div class="dev-credit-text">
+          <span>Developed by <strong>Acies Technology Africa</strong></span>
+          <a href="tel:08143972347" class="dev-credit-phone" title="Call Acies Technology Africa">08143972347</a>
+        </div>
+        <a href="https://wa.me/2348143972347?text=Hello%20Acies%20Technology%20Africa,%20I%20am%20reaching%20out%20from%20Victory%20Homa%20Obuzor%20Portfolio" target="_blank" rel="noopener noreferrer" class="dev-whatsapp-btn" title="Chat with Acies Technology Africa on WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp ↗
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =======================================================================
+       UNIVERSAL MODAL DIALOG
+       ======================================================================= -->
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <div class="eyebrow" id="modalEyebrow">PORTFOLIO ARCHIVE</div>
+          <h2 id="modalTitle">Modal Title</h2>
+        </div>
+        <button class="modal-close-btn" id="modalClose" aria-label="Close dialog">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="modalContent"></div>
+      <div class="modal-footer" id="modalFooter"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toastNotice" role="status">
+    <i class="fa-solid fa-check"></i> Action completed
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="script.js?v=8"></script>
+  <script src="enhance.js?v=2"></script>
+
+</body>
+</html>
